@@ -2,7 +2,7 @@ require "csv"
 
 puts "1(新規でメモを作成) 2(既存のメモ編集する)"
 
-memo_number = gets.chomp
+memo_number = gets.to_i
 
 if memo_number == 1
   puts "新規でメモを作成します。"
