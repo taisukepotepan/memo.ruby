@@ -2,13 +2,15 @@ require "csv"
 
 puts "1(新規でメモを作成) 2(既存のメモ編集する)"
 
-memo_number = gets.to_i
+memo_number = gets.chomp
 
 if memo_number == 1
+  puts "新規でメモを作成します。"
+  
   puts "拡張子を除いたファイル名を入力してください"
+ file_name = gets.chomp
 
- file_name = gets.to_s
-
+puts "「#{file_name}.csv」という名前のファイルを作成しました。"
  puts "メモしたい内容を記入してください"
  p "完了したら Ctrl+D　を入力します"
 
