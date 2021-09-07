@@ -3,7 +3,7 @@ require "csv"
 puts "1(新規でメモを作成) 2(既存のメモ編集する)"
 
 memo_number = gets.to_i
-
+ puts memo_number 
 if memo_number == 1
   puts "新規でメモを作成します。"
   
@@ -19,11 +19,16 @@ memo_type = readlines
 CSV.open("#{file_name}.csv", 'w') do |csv|
   csv << ["#{memo_type}"]
 
+
+
 end
 
 
 elsif memo_number == 2
- puts "既存のcsvファイル名(exist.csv)に追記します"
+ 
+ name = "aiueo.csv"
+ 
+ puts "既存のcsvファイル名(#{name})に追記します"
 
 
 puts "追記したい内容を入力してください"
@@ -31,7 +36,7 @@ p "完了したら Ctrl+D　を入力します"
 
 memo_type = readlines
 
- CSV.open("exsit.csv", 'a') do |csv|
+ CSV.open("#{name}", 'a') do |csv|
 
   csv << ["#{memo_type}"]
 
